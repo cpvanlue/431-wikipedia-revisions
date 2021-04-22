@@ -8,5 +8,5 @@ import java.text.SimpleDateFormat;
 
 public interface RevisionInterface {
     DateFormat date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-    String format(Revision revision) throws ParseException;
+    String format(Revision revision);
 }

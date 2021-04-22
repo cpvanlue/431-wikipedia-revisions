@@ -32,9 +32,17 @@ read, thus making the application more user-friendly.
 
 ## Challenge #3 Complete
 
-(Explain your solution to Challenge #3. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+For this challenge, I began by converting the list of revisions into a stream
+using the .stream() method in runQuery() in the WikipediaAnalyzer class, right
+before where the old for loop began. Once converted to a stream, I needed to 
+use the RevisionFormatter's format method to properly format the revisions into 
+readable text. To do this, I used the .map() method to apply the format() method
+to each of the elements in the stream. Once all of the revisions have been properly
+formatted, it was time to collect them all and join with "\n" as a separator so that
+they would all appear on different lines. In order to use RevisionFormatter's format() 
+method, I needed to remove the thrown ParseException that I included during a previous 
+challenge. 
+
 
 ## Reflection Question #1: Functional vs OO
 

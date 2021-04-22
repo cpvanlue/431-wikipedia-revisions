@@ -10,9 +10,14 @@ import java.util.Date;
 public final class RevisionFormatter implements RevisionInterface {
 
     @Override
-    public String format(Revision revision) throws ParseException {
-        return String.format("At %s, a change by %s",
-                date.parse(revision.timestamp.toString()),
-                revision.name);
+    public String format(Revision revision) {
+        try {
+            return String.format("At %s, a change by %s",
+                    date.parse(revision.timestamp.toString()),
+                    revision.name);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
