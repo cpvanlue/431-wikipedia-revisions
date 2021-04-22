@@ -1,24 +1,16 @@
 # Project Report
 
-(Put your name here)
-
-## Markdown Tips
-
-If you are unfamiliar with MarkDown, check out 
-[the official documentation](https://guides.github.com/features/mastering-markdown/).
-
-Note that IntelliJ IDEA has a Markdown preview that you can access in 
-the upper-right of the editor. Also, since Markdown documents&mdash;like
-source code&mdash;should be human-readable, make sure you keep your lines
-short, as you can see I have done in my Markdown files.
-
-Please remove this subsection before submitting your report. 
+Caleb Van Lue
 
 ## Challenge #1 Complete
 
-(Explain your solution to Challenge #1. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+For this challenge, I modified a line in the QueryEngineModule class 
+in order to use the real WikipediaQueryEngine instead of the fake one.
+Initially, the QueryEngine interface was being bound to the FakeQueryEngine
+class, so by replacing FakeQueryEngine with WikipediaQueryEngine on line 14, 
+I was able to utilize a proper connection to Wikipedia rather than a 
+simulated one.
+
 
 ## Challenge #2 Complete
 
