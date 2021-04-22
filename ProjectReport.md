@@ -50,6 +50,15 @@ challenge.
 approaches to string concatenation you explored in challenge #3. Which do you
 prefer, and why?)
 
+In most of my previous projects, I utilized the iterative approach to string concatenation
+rather than the functional one. As a beginning programmer, this process made more sense to 
+me, as I could follow along with each line to determine what exactly was happening with my 
+data. Now, as a more advanced programmer, I feel that I prefer the functional approach. The 
+ability to condense many lines of code down to a single line through method chaining is very 
+satisfying to me, and I now find it simpler to analyze what each method is doing through this 
+approach. The functional approach seems cleaner to me: why use many lines to accomplish one 
+thing when you can do the exact same thing in one line? 
+
 ## Reflection Question #2: Polymorphism and Dependency Inversion
 
 (Explain how polymorphism engendered dependency inversion in this little
@@ -58,3 +67,12 @@ your correct use of technical terminology.
 Consider, for example, where exactly is polymorphism used?
 Where exactly is a dependency inverted?)
 
+Through the use of dynamic polymorphism in the RevisionFormatter and RevisionInterface
+classes, dependency inversion is created. By creating an interface to be used by the 
+RevisionFormatter class, we introduce abstraction to this application. Abstraction is also
+applied through the QueryEngine interface and the FakeQueryEngine/WikipediaQueryEngine classes.
+As any instances of these classes that implement the interfaces are instances of multiple types
+of classes, polymorphism is present in each of them. This separation through the abstract layer
+and the binding through Guice allows us to invert the dependencies and follow the Dependency
+Inversion Principle. By coding through our interfaces rather than our concrete classes, we are 
+able to depend on the abstraction, inverting the dependencies.
