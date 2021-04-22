@@ -14,9 +14,21 @@ simulated one.
 
 ## Challenge #2 Complete
 
-(Explain your solution to Challenge #2. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+For this challenge, I found the timestamp of each revision to be the
+biggest eyesore, so that's what I sougght to correct. In order to do this,
+I created the RevisionInterface, which holds a Date format that matches those
+of Wikipedia's timestamps, as well as the format() method that returns a 
+properly formatted String (that is slightly prettier than previous
+implementations). Next, I implemented this interface in the RevisionFormatter
+class, which allowed me to simplify the creation of the returned string by
+utilizing that previously defined Date format in the implemented interface.
+Once the timestamp had been modified to look better, I created the 
+RevisionInterfaceModule, which binds the RevisionInterface to the 
+RevisionFormatter class, injecting the proper dependency at runtime. 
+Finally, I added this module to the Guice injector within the App class. 
+I feel that this slight modification makes the timestamps much simpler to
+read, thus making the application more user-friendly.
+
 
 ## Challenge #3 Complete
 

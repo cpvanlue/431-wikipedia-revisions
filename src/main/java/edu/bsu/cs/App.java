@@ -29,6 +29,7 @@ public final class App extends Application {
     public void start(Stage primaryStage) {
         Injector injector = Guice.createInjector(
                 new QueryEngineModule(),
+                new RevisionInterfaceModule(),
                 executorServiceModule
         );
         WikipediaAnalyzer analyzer = injector.getInstance(WikipediaAnalyzer.class);

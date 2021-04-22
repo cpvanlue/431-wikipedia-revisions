@@ -9,6 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 
@@ -66,7 +67,7 @@ public final class WikipediaAnalyzer extends VBox {
                 stringBuilder.append("\n");
             }
             outputArea.setText(stringBuilder.toString());
-        } catch (IOException e) {
+        } catch (IOException | ParseException e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Connection Problem");
             alert.setContentText("There was a problem connecting to Wikipedia. Check your network connection or try again later.");
