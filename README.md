@@ -1,4 +1,4 @@
-# Wikipedia Revisions Reporter
+# Wikipedia Revisions Reporter: 431 Project
 
 This JavaFX application reports on the most recent changes to a Wikipedia
 page. When you provide the name of a Wikipedia article, the application
